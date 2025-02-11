@@ -18,6 +18,10 @@ scripts used for csc368 a1
   - system.l2_cache.overallMisses
 - CPI
   - system.cpu.cpi
+- Instruction Mix
+  - system.cpu.commitStats0.numInsts
+  - system.cpu.commitStats0.committedInstType::IntAlu
+  - system.cpu.commitStats0.committedInstType::(depend on benchmark)
 
 ## Exploration 2
 - keep input size at 100k
