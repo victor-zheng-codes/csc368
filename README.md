@@ -29,6 +29,11 @@ scripts used for csc368 a1
 - keep input size at 100k
 - change the in-order to out-of-order pipeline
 
+### Metrics additional
+ - Out-Of-Order Specific Metrics
+  - Issue rate: system.cpu.issueRate
+  - FUBusy Rate: system.cpu.fuBusyRate
+    
 ## Exploration 3
 - keep input size at 100k
 - default: 4kB L1D, 4kB L1I, 32kB L2, L1D associativity 2, L1I associativity 2, L2 associativity 8
