@@ -10,6 +10,7 @@ scripts used for csc368 a1
 - Number of Instructions
   - simInsts
   - simOps
+  - system.cpu.fetchStats0.branchRate
   - system.cpu.commitStats0.numFPInsts
   - system.cpu.commitStats0.numIntInsts
   - system.cpu.numCycles 
