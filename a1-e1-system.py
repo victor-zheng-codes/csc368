@@ -57,12 +57,11 @@ system.system_port = system.membus.cpu_side_ports
 ## Use timing mode for memory modelling
 system.mem_mode = 'timing'
 
-## Cache
-
 # CPU Setup
 system.cpu = X86TimingSimpleCPU()
-system.cpu.icache_port = system.membus.cpu_side_ports
-system.cpu.dcache_port = system.membus.cpu_side_ports
+
+#system.cpu.icache_port = system.membus.cpu_side_ports
+#system.cpu.dcache_port = system.membus.cpu_side_ports
 
 ## This is needed when we use x86 CPUs
 system.cpu.createInterruptController()
@@ -120,3 +119,6 @@ root = Root(full_system=False, system=system) # must assign a root
 
 m5.instantiate() # must be called before m5.simulate
 m5.simulate()
+
+
+
