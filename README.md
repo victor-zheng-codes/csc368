@@ -44,3 +44,5 @@ scripts used for csc368 a1
   -   L1 cache size from 4kB to 8kB for both L1 instruction cache and L1 data cache
   -   L1 associativity change to 4 for both L1 instruction cache and L1 data cache
 
+## Results Documentation
+Available here: https://docs.google.com/spreadsheets/d/1spE-UH5s1P_3Kw6wnODC7X6j8q7kPJKTxZ4-5oUYX30/edit?usp=sharing
