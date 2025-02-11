@@ -46,3 +46,16 @@ scripts used for csc368 a1
 
 ## Results Documentation
 Available here: https://docs.google.com/spreadsheets/d/1spE-UH5s1P_3Kw6wnODC7X6j8q7kPJKTxZ4-5oUYX30/edit?usp=sharing
+
+
+## How to Run
+### For data:
+
+Look at the PBBS benchmark suite for determining inputs. 
+
+```~/classes/csc368/a1/wordCounts$ ./trigramString 1000000 1000000.txt```
+
+### For simulation
+
+Generate simulated data by running using the parameters. -d is for the directory. -b is the benchmark suite, -i is the input file
+```~/classes/csc368/a1/wordCounts$ /u/csc368h/winter/pub/bin/gem5.opt -d m5out-wordcount-1000000 a1-e1-system.py -b ./wc -i ../sequenceData/1000000.txt```
