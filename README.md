@@ -10,6 +10,8 @@ scripts used for csc368 a1
 - Number of Instructions
   - simInsts
   - simOps
+  - system.cpu.commitStats0.numFPInsts
+  - system.cpu.commitStats0.numIntInsts
   - system.cpu.numCycles 
 - Cache hits and cache misses
   - system.l2_cache.overallHits
