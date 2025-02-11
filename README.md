@@ -17,10 +17,13 @@ scripts used for csc368 a1
 - Cache hits and cache misses
   - system.cpu.l1d.overallHits
   - system.cpu.l1d.overallMisses
+  - system.cpu.l1d.overallMissRate
   - system.cpu.l1i.overallHits
   - system.cpu.l1i.overallMisses
+  - system.cpu.l1i.overallMissRate
   - system.l2_cache.overallHits
   - system.l2_cache.overallMisses
+  - system.l2_cache.overallMissRate
 - CPI
   - system.cpu.cpi
 - Instruction Mix
