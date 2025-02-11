@@ -14,6 +14,8 @@ scripts used for csc368 a1
   - system.cpu.commitStats0.numIntInsts
   - system.cpu.numCycles 
 - Cache hits and cache misses
+  - system.cpu.l1d.overallHits
+  - system.cpu.l1d.overallMisses
   - system.l2_cache.overallHits
   - system.l2_cache.overallMisses
 - CPI
