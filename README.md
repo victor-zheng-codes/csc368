@@ -4,6 +4,19 @@ scripts used for csc368 a1
 ## Exploration 1
 - input sizes from 1k to 10k to 100k
 
+### Metrics Chosen
+- Execution Time
+  - simSeconds
+- Number of Instructions
+  - simInsts
+  - simOps
+  - system.cpu.numCycles 
+- Cache hits and cache misses
+  - system.l2_cache.overallHits
+  - system.l2_cache.overallMisses
+- CPI
+  - system.cpu.cpi
+
 ## Exploration 2
 - keep input size at 100k
 - change the in-order to out-of-order pipeline
