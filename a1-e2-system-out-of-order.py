@@ -3,7 +3,7 @@ import argparse
 from m5.objects import *
 import sys
 
-# 100k, modify the cache configs
+# 100k
 
 DEAFULT_BINARY = '/u/csc368h/winter/pub/workloads/hello'
 
@@ -59,8 +59,10 @@ system.system_port = system.membus.cpu_side_ports
 ## Use timing mode for memory modelling
 system.mem_mode = 'timing'
 
-# CPU Setup
-system.cpu = X86MinorCPU()
+# CPU Setup for out of order pipeline
+system.cpu = X86O3CPU()
+
+# no longer needed
 # system.cpu.icache_port = system.membus.cpu_side_ports
 # system.cpu.dcache_port = system.membus.cpu_side_ports
 

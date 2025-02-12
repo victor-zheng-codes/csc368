@@ -17,7 +17,7 @@ args = parser.parse_args()
 
 
 class L1ICache(Cache):
-    assoc = 2
+    assoc = 4
     tag_latency = 1
     data_latency = 1
     response_latency = 1
@@ -26,7 +26,7 @@ class L1ICache(Cache):
     size='4kB'
 
 class L1DCache(Cache):
-    assoc = 2
+    assoc = 4
     tag_latency = 1
     data_latency = 1
     response_latency = 1

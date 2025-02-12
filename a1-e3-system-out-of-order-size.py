@@ -23,7 +23,7 @@ class L1ICache(Cache):
     response_latency = 1
     mshrs = 8
     tgts_per_mshr = 20
-    size='4kB'
+    size='8kB'
 
 class L1DCache(Cache):
     assoc = 2
@@ -32,7 +32,7 @@ class L1DCache(Cache):
     response_latency = 1
     mshrs = 8
     tgts_per_mshr = 20
-    size='4kB'
+    size='8kB'
 
 class L2Cache(Cache):
     assoc = 8
@@ -60,7 +60,7 @@ system.system_port = system.membus.cpu_side_ports
 system.mem_mode = 'timing'
 
 # CPU Setup
-system.cpu = X86MinorCPU()
+system.cpu = X86O3CPU()
 # system.cpu.icache_port = system.membus.cpu_side_ports
 # system.cpu.dcache_port = system.membus.cpu_side_ports
 

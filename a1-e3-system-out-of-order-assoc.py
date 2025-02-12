@@ -3,7 +3,7 @@ import argparse
 from m5.objects import *
 import sys
 
-# 100k
+# 100k, modify the cache configs
 
 DEAFULT_BINARY = '/u/csc368h/winter/pub/workloads/hello'
 
@@ -17,7 +17,7 @@ args = parser.parse_args()
 
 
 class L1ICache(Cache):
-    assoc = 2
+    assoc = 4
     tag_latency = 1
     data_latency = 1
     response_latency = 1
@@ -26,7 +26,7 @@ class L1ICache(Cache):
     size='4kB'
 
 class L1DCache(Cache):
-    assoc = 2
+    assoc = 4
     tag_latency = 1
     data_latency = 1
     response_latency = 1
@@ -61,8 +61,6 @@ system.mem_mode = 'timing'
 
 # CPU Setup
 system.cpu = X86O3CPU()
-
-# no longer needed
 # system.cpu.icache_port = system.membus.cpu_side_ports
 # system.cpu.dcache_port = system.membus.cpu_side_ports
 
