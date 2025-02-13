@@ -67,6 +67,11 @@ Available here: https://docs.google.com/spreadsheets/d/1spE-UH5s1P_3Kw6wnODC7X6j
   - `/u/csc368h/winter/pub/workloads/pbbsbench/testData/graphData/randLocalGraph -j -d 3 -m <10n> <n> ./data/graph/<filename>`
   - n=1000, 10000, 100000
   - chosen distribution generates a random local graph with approximately n vertices and 10n edges
+
+- SORT
+  -`/u/csc368h/winter/pub/workloads/pbbsbench/testData/sequenceData/randomSeq -t double <n> ./data/<filename>`
+  - n=1000, 10000, 100000
+  - chosen distribution generates Double-precision floating-point numbers uniformly at random from the range [0:1]
     
 ## Running Workload
 - HIST
@@ -79,3 +84,7 @@ Available here: https://docs.google.com/spreadsheets/d/1spE-UH5s1P_3Kw6wnODC7X6j
 - MIS
   - running the serial executable since we are on single core
   - e.g. `/u/csc368h/winter/pub/bin/gem5.opt <script> -b /u/csc368h/winter/pub/workloads/pbbsbench/benchmarks/maximalIndependentSet/serialMIS/MIS -i ./data/graph/<filename>`
+
+- SORT
+  -  running the sampleSort algorithm
+  - e.g. `/u/csc368h/winter/pub/bin/gem5.opt -d m5out-sort-1000 a1-e1-system.py -b /u/csc368h/winter/pub/workloads/pbbsbench/benchmarks/comparisonSort/sampleSort/sort -i ./data/<filename>`
