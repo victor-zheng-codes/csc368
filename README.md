@@ -58,7 +58,7 @@ Available here: https://docs.google.com/spreadsheets/d/1spE-UH5s1P_3Kw6wnODC7X6j
   - n=1000, 10000, 100000
   - chosen default distribution generates a random sequence of n integers in the range of [0:256]
 
-##Running Workload
+## Running Workload
 - HIST
   - running the sequential executable since we are on single core
   - e.g. /u/csc368h/winter/pub/bin/gem5.opt -d m5outdir -b /u/csc368h/winter/pub/workloads/pbbsbench/benchmarks/histogram/sequential/histogram -i ./data/sequence/rand-256-1000
