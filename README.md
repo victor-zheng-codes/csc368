@@ -52,15 +52,13 @@ scripts used for csc368 a1
 ## Results Documentation
 Available here: https://docs.google.com/spreadsheets/d/1spE-UH5s1P_3Kw6wnODC7X6j8q7kPJKTxZ4-5oUYX30/edit?usp=sharing
 
+## Generating Input
+- HIST
+  - /u/csc368h/winter/pub/workloads/pbbsbench/testData/sequenceData/randomSeq -t int -r 256 n ./data/sequence/rand-256-n
+  - n=1000, 10000, 100000
+  - chosen default distribution generates a random sequence of n integers in the range of [0:256]
 
-## How to Run
-### For data:
-
-Look at the PBBS benchmark suite for determining inputs. 
-
-```~/classes/csc368/a1/wordCounts$ ./trigramString 1000000 1000000.txt```
-
-### For simulation
-
-Generate simulated data by running using the parameters. -d is for the directory. -b is the benchmark suite, -i is the input file
-```~/classes/csc368/a1/wordCounts$ /u/csc368h/winter/pub/bin/gem5.opt -d m5out-wordcount-1000000 a1-e1-system.py -b ./wc -i ../sequenceData/1000000.txt```
+### Running Workload
+- HIST
+  - running the sequential executable since we are on single core
+  - e.g. /u/csc368h/winter/pub/bin/gem5.opt -d m5outdir -b /u/csc368h/winter/pub/workloads/pbbsbench/benchmarks/histogram/sequential/histogram -i ./data/sequence/rand-256-1000
