@@ -54,19 +54,19 @@ Available here: https://docs.google.com/spreadsheets/d/1spE-UH5s1P_3Kw6wnODC7X6j
 
 ## Generating Input
 - HIST
-  - /u/csc368h/winter/pub/workloads/pbbsbench/testData/sequenceData/randomSeq -t int -r 256 n ./data/sequence/rand-256-n
+  - `/u/csc368h/winter/pub/workloads/pbbsbench/testData/sequenceData/randomSeq -t int -r 256 n ./data/sequence/rand-256-n`
   - n=1000, 10000, 100000
   - chosen default distribution generates a random sequence of n integers in the range of [0:256]
 
 - WC
-  - /u/csc368h/winter/pub/workloads/pbbsbench/testData/sequenceData/trigramString n ./data/sequence/trigram-string-n
+  - `/u/csc368h/winter/pub/workloads/pbbsbench/testData/sequenceData/trigramString n ./data/sequence/trigram-string-n`
   - n=1000, 10000, 100000
   - chosen distribution generates a random sequence of n trigram strings
     
 ## Running Workload
 - HIST
   - running the sequential executable since we are on single core
-  - e.g. /u/csc368h/winter/pub/bin/gem5.opt -d m5outdir -b /u/csc368h/winter/pub/workloads/pbbsbench/benchmarks/histogram/sequential/histogram -i ./data/sequence/rand-256-1000
+  - e.g. `/u/csc368h/winter/pub/bin/gem5.opt -d m5outdir -b /u/csc368h/winter/pub/workloads/pbbsbench/benchmarks/histogram/sequential/histogram -i ./data/sequence/rand-256-1000`
 - WC
   - running the serial executable instead of histogram since we are on a single core
-  - e.g. /u/csc368h/winter/pub/bin/gem5.opt -d m5out-wordcount-1000 a1-e1-system.py -b /u/csc368h/winter/pub/workloads/pbbsbench/benchmarks/wordCounts/serial/wc -i ../sequenceData/trigram-string-1000 
+  - e.g. `/u/csc368h/winter/pub/bin/gem5.opt -d m5out-wordcount-1000 a1-e1-system.py -b /u/csc368h/winter/pub/workloads/pbbsbench/benchmarks/wordCounts/serial/wc -i ../sequenceData/trigram-string-1000`
