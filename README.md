@@ -69,7 +69,7 @@ Available here: https://docs.google.com/spreadsheets/d/1spE-UH5s1P_3Kw6wnODC7X6j
   - chosen distribution generates a random local graph with approximately n vertices and 10n edges
 
 - SORT
-  -`/u/csc368h/winter/pub/workloads/pbbsbench/testData/sequenceData/randomSeq -t double <n> ./data/<filename>`
+  - `/u/csc368h/winter/pub/workloads/pbbsbench/testData/sequenceData/randomSeq -t double <n> ./data/<filename>`
   - n=1000, 10000, 100000
   - chosen distribution generates Double-precision floating-point numbers uniformly at random from the range [0:1]
     
