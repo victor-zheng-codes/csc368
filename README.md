@@ -54,12 +54,12 @@ Available here: https://docs.google.com/spreadsheets/d/1spE-UH5s1P_3Kw6wnODC7X6j
 
 ## Generating Input
 - HIST
-  - `/u/csc368h/winter/pub/workloads/pbbsbench/testData/sequenceData/randomSeq -t int -r 256 n ./data/sequence/rand-256-n`
+  - `/u/csc368h/winter/pub/workloads/pbbsbench/testData/sequenceData/randomSeq -t int -r 256 n ./data/sequence/<filename>`
   - n=1000, 10000, 100000
   - chosen default distribution generates a random sequence of n integers in the range of [0:256]
 
 - WC
-  - `/u/csc368h/winter/pub/workloads/pbbsbench/testData/sequenceData/trigramString n ./data/sequence/trigram-string-n`
+  - `/u/csc368h/winter/pub/workloads/pbbsbench/testData/sequenceData/trigramString n ./data/sequence/<filename>`
   - n=1000, 10000, 100000
   - chosen distribution generates a random sequence of n trigram strings
 
@@ -72,14 +72,19 @@ Available here: https://docs.google.com/spreadsheets/d/1spE-UH5s1P_3Kw6wnODC7X6j
   - `/u/csc368h/winter/pub/workloads/pbbsbench/testData/sequenceData/randomSeq -t double <n> ./data/<filename>`
   - n=1000, 10000, 100000
   - chosen distribution generates Double-precision floating-point numbers uniformly at random from the range [0:1]
+
+- DDUP
+  - `/u/csc368h/winter/pub/workloads/pbbsbench/testData/sequenceData/randomSeq -t int -r n n ./data/sequence/<filename>`
+  - n=1000, 10000, 100000
+  - chosen distribution generates A random sequence of n integers in the range [0:n)
     
 ## Running Workload
 - HIST
   - running the sequential executable since we are on single core
-  - e.g. `/u/csc368h/winter/pub/bin/gem5.opt -d m5outdir a1-e1-system.py -b /u/csc368h/winter/pub/workloads/pbbsbench/benchmarks/histogram/sequential/histogram -i ./data/sequence/rand-256-1000`
+  - e.g. `/u/csc368h/winter/pub/bin/gem5.opt -d m5outdir a1-e1-system.py -b /u/csc368h/winter/pub/workloads/pbbsbench/benchmarks/histogram/sequential/histogram -i ./data/sequence/<filename>`
 - WC
   - running the serial executable instead of histogram since we are on a single core
-  - e.g. `/u/csc368h/winter/pub/bin/gem5.opt -d m5out-wordcount-1000 a1-e1-system.py -b /u/csc368h/winter/pub/workloads/pbbsbench/benchmarks/wordCounts/serial/wc -i ../sequenceData/trigram-string-1000`
+  - e.g. `/u/csc368h/winter/pub/bin/gem5.opt -d m5out-wordcount-1000 a1-e1-system.py -b /u/csc368h/winter/pub/workloads/pbbsbench/benchmarks/wordCounts/serial/wc -i ../sequenceData/<filename>`
 
 - MIS
   - running the serial executable since we are on single core
@@ -88,3 +93,7 @@ Available here: https://docs.google.com/spreadsheets/d/1spE-UH5s1P_3Kw6wnODC7X6j
 - SORT
   -  running the sampleSort algorithm
   - e.g. `/u/csc368h/winter/pub/bin/gem5.opt -d m5out-sort-1000 a1-e1-system.py -b /u/csc368h/winter/pub/workloads/pbbsbench/benchmarks/comparisonSort/sampleSort/sort -i ./data/<filename>`
+
+- DDUP
+  - running the serial hash executable
+  - e.g. `/u/csc368h/winter/pub/bin/gem5.opt -d m5outdir a1-e1-system.py -b /u/csc368h/winter/pub/workloads/pbbsbench/benchmarks/removeDuplicates/serial_hash/dedup -i ./data/sequence/<filename>`
