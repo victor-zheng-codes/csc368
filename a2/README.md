@@ -14,6 +14,9 @@ General plan
 
 ## Exploration 1: Prefetching
 - input sizes at 100k
+- sequentialPrefetching configs: TagBased prefetching, degree 2, size of queue at 32 prefetches, size ???
+- stridePrefetching configs: confidence counter bits 3, initial confidence 4, prefetch generation threshold 50, degree 4, distance ???, associativity of the stride prefetcher 4, memory size 64 prefetched lines
+- ROB buffer, Branch Predictor Table
 
 ### Metrics Chosen
 - Execution Time
@@ -55,6 +58,9 @@ General plan
 ## Exploration 2: Branch Prediction
 - keep input size at 100k
 - change the in-order to out-of-order pipeline
+- Local branch predictor configs: localPredictorSize=2048, localCtrBits=2
+- Tournament branch predictor configs (keep default): localPredictorSize=2048, globalPredictorSize=8192, choicePredictorSize=8192, localCtrBits=2, globalCtrBits=2, choiceCtrBits=2
+- TAGE branch predictor configs (keep default): 7 history tables, 5 minimum history size, 130 max history size 
 
 ### Metrics additional on top of Exploration 1
 
