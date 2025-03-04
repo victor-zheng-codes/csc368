@@ -10,9 +10,6 @@ scripts used for csc368 a2
 - Number of Instructions
   - simInsts
   - simOps
-  - system.cpu.fetchStats0.branchRate
-  - system.cpu.commitStats0.numFPInsts
-  - system.cpu.commitStats0.numIntInsts
   - system.cpu.numCycles 
 - Cache hits and cache misses
   - system.cpu.l1d.overallHits
@@ -26,22 +23,35 @@ scripts used for csc368 a2
   - system.l2_cache.overallMissRate
 - CPI
   - system.cpu.cpi
-- Instruction Mix
-  - system.cpu.commitStats0.numInsts
-  - system.cpu.commitStats0.committedInstType::IntAlu
-  - system.cpu.commitStats0.committedInstType::(depend on benchmark)
+  - system.cpu.ipc
+
 
 ## Exploration 2: Branch Prediction
 - keep input size at 100k
 - change the in-order to out-of-order pipeline
 
-### Metrics additional on top of 
- - Out-Of-Order Specific Metrics
-  - Issue rate: system.cpu.issueRate
-  - FUBusy Rate: system.cpu.fuBusyRate
-    
-## Results Documentation
+### Metrics additional on top of Exploration 1
 
+- Branch Prediction
+  -  system.cpu.branchPred.condPredicted
+ -   system.cpu.branchPred.condPredictedTaken
+ -   system.cpu.branchPred.condIncorrect
+ -   system.cpu.branchPred.predTakenBTBMiss
+ -   system.cpu.branchPred.NotTakenMispredicted
+ -   system.cpu.branchPred.TakenMispredicted
+ -   system.cpu.branchPred.BTBLookups
+ -   system.cpu.branchPred.BTBUpdates
+ -   system.cpu.branchPred.BTBHits
+ -   system.cpu.branchPred.BTBHitRatio
+ -   system.cpu.branchPred.BTBMispredicted
+ -   system.cpu.branchPred.indirectLookups
+ -   system.cpu.branchPred.indirectHits
+ -   system.cpu.branchPred.indirectMisses
+ -   system.cpu.branchPred.indirectMispredicted
+
+## Results Documentation
+[Results documented here](https://docs.google.com/spreadsheets/d/11sUWbIu4pkXwjldWd1vx3iH6u1-qus7tdTPZ7A8h19s/edit?gid=0#gid=0 
+)
 
 ## Generating Input
 - HIST
