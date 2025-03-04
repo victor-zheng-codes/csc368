@@ -32,7 +32,6 @@ scripts used for csc368 a2
 
 ### Metrics additional on top of Exploration 1
 
-- Branch Prediction
   -  system.cpu.branchPred.condPredicted
  -   system.cpu.branchPred.condPredictedTaken
  -   system.cpu.branchPred.condIncorrect
