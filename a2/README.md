@@ -1,6 +1,17 @@
 # csc368-a2
 scripts used for csc368 a2
 
+General plan
+- 3 different comparisons for Exploration 1 involving: (1) no prefetching, (2) sequential prefetching, (3) stride prefetching
+- 4 different comparisons for Exploration 2 involving: (1) no branch predictor, (2) local predictor, (3) tournament predictor (hybrid), (4) TAGE-based predictor
+- Use O3CPU()
+- L1i cache size and L1d cache sizes fixed at 1kB, L2 cache size at 32kB
+- only connect prefetchers to L1i and L1d
+- input sizes will be 100k
+- run on the same benchmarks as in A1: HIST, MST, SORT, WC
+- cite sources as we go
+- report written in overleaf
+
 ## Exploration 1: Prefetching
 - input sizes at 100k
 

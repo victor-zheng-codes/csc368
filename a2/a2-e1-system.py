@@ -23,7 +23,7 @@ class L1ICache(Cache):
     response_latency = 1
     mshrs = 8
     tgts_per_mshr = 20
-    size='4kB'
+    size= '1kB'
 
 class L1DCache(Cache):
     assoc = 2
@@ -32,7 +32,7 @@ class L1DCache(Cache):
     response_latency = 1
     mshrs = 8
     tgts_per_mshr = 20
-    size='4kB'
+    size='1kB'
 
 class L2Cache(Cache):
     assoc = 8
@@ -61,8 +61,12 @@ system.mem_mode = 'timing'
 
 # CPU Setup
 system.cpu = X86MinorCPU()
-# system.cpu.icache_port = system.membus.cpu_side_ports
-# system.cpu.dcache_port = system.membus.cpu_side_ports
+
+# exploration 2
+# system.cpu.branchPred = LocalBP(localPredictorSize=2048, localCtrBits=2)
+
+# change size of the tournament BP
+# system.cpu.branchPred = TournamentBP()
 
 ## This is needed when we use x86 CPUs
 system.cpu.createInterruptController()
@@ -82,8 +86,18 @@ system.cpu.l1i.cpu_side = system.cpu.icache_port
 system.l2_cache = L2Cache()
 system.l2_bus = L2XBar()
 
+# l1 d
 system.cpu.l1d.mem_side = system.l2_bus.cpu_side_ports
+
+# exploration 1 will test the following
+# system.cpu.l1d.prefetcher = StridePrefetcher()
+# system.cpu.l1i.prefetcher = TaggedPrefetcher(degree=2)
+
+# l1 i
 system.cpu.l1i.mem_side = system.l2_bus.cpu_side_ports
+
+
+# l2
 system.l2_cache.mem_side = system.membus.cpu_side_ports
 system.l2_cache.cpu_side = system.l2_bus.mem_side_ports
 
