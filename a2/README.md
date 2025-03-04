@@ -24,7 +24,22 @@ scripts used for csc368 a2
 - CPI
   - system.cpu.cpi
   - system.cpu.ipc
-
+- Prefetch statistics
+  - system.cpu.l1i.prefetcher.demandMshrMisses
+  - system.cpu.l1i.prefetcher.pfIssued
+  - system.cpu.l1i.prefetcher.pfUseful
+  - system.cpu.l1i.prefetcher.pfUsefulButMiss
+  - system.cpu.l1i.prefetcher.accuracy
+  - system.cpu.l1i.prefetcher.coverage
+  - system.cpu.l1i.prefetcher.pfHitInCache
+  - system.cpu.l1i.prefetcher.pfHitInMSHR
+  - system.cpu.l1i.prefetcher.pfHitInWB
+  - system.cpu.l1i.prefetcher.pfLate
+  - system.cpu.l1i.prefetcher.pfIdentified
+  - system.cpu.l1i.prefetcher.pfBufferHit
+  - system.cpu.l1i.prefetcher.pfInCache
+  - system.cpu.l1i.prefetcher.pfRemovedDemand
+  - system.cpu.l1i.prefetcher.pfRemovedFull
 
 ## Exploration 2: Branch Prediction
 - keep input size at 100k
