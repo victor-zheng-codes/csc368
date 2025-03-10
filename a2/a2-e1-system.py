@@ -60,7 +60,7 @@ system.system_port = system.membus.cpu_side_ports
 system.mem_mode = 'timing'
 
 # CPU Setup
-system.cpu = X86MinorCPU()
+system.cpu = X86O3CPU()
 
 # exploration 2
 # system.cpu.branchPred = LocalBP(localPredictorSize=2048, localCtrBits=2)
