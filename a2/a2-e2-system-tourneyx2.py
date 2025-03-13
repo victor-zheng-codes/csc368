@@ -68,6 +68,15 @@ system.cpu = X86O3CPU()
 # change size of the tournament BP
 # system.cpu.branchPred = TournamentBP()
 
+system.cpu.branchPred = TournamentBP(
+    localPredictorSize=4096,   # Increased from 2048
+    globalPredictorSize=16384, # Increased from 8192
+    choicePredictorSize=16384, # Increased from 8192
+    localCtrBits=3,            # Increased from 2
+    globalCtrBits=3,           # Increased from 2
+    choiceCtrBits=3            # Increased from 2
+)
+
 ## This is needed when we use x86 CPUs
 system.cpu.createInterruptController()
 system.cpu.interrupts[0].pio = system.membus.mem_side_ports
