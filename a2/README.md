@@ -60,6 +60,7 @@ General plan
 - change the in-order to out-of-order pipeline
 - Local branch predictor configs: localPredictorSize=2048, localCtrBits=2
 - Tournament branch predictor configs (keep default): localPredictorSize=2048, globalPredictorSize=8192, choicePredictorSize=8192, localCtrBits=2, globalCtrBits=2, choiceCtrBits=2
+- Tournament branch predictor doubled localPredictorSize=4096, globalPredictorSize=16384, choicePredictorSize=16384, localCtrBits=3, globalCtrBits=3, choiceCtrBits=3
 - TAGE branch predictor configs (keep default): 7 history tables, 5 minimum history size, 130 max history size 
 
 ### Metrics additional on top of Exploration 1
